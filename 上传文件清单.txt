@@ -1,0 +1,63 @@
+═══════════════════════════════════════════════════════════════
+  GitHub 上传文件清单
+═══════════════════════════════════════════════════════════════
+
+【必须上传的核心文件】
+✓ vless-server.sh          - 主脚本文件
+✓ panel_server.py          - Web 面板后端服务器
+✓ start_panel.sh           - 面板启动脚本
+✓ requirements.txt         - Python 依赖列表
+✓ .gitignore               - Git 忽略规则（重要！）
+
+【Web 面板前端文件】
+✓ panel/index.html         - 前端页面
+✓ panel/style.css          - 样式文件
+✓ panel/app.js             - JavaScript 逻辑
+
+【可选但推荐的文件】
+✓ 快速部署.sh              - 自动化部署脚本
+✓ README.md                - 项目说明文档
+✓ VPS部署指南.md           - 详细部署指南
+✓ GitHub上传指南.md        - 本指南
+
+【不需要上传的文件】
+✗ 优化完成说明.md          - 临时文档（可选）
+✗ 优化建议.md              - 临时文档（可选）
+✗ 脚本解析.md              - 临时文档（可选）
+✗ 任何 .log 文件           - 日志文件
+✗ 任何 .conf 文件          - 配置文件（运行时生成）
+✗ __pycache__/             - Python 缓存
+
+═══════════════════════════════════════════════════════════════
+  快速上传命令
+═══════════════════════════════════════════════════════════════
+
+# 1. 初始化 Git
+git init
+
+# 2. 添加远程仓库（替换为您的仓库地址）
+git remote add origin https://github.com/您的用户名/仓库名.git
+
+# 3. 添加文件
+git add vless-server.sh panel_server.py start_panel.sh requirements.txt
+git add panel/ .gitignore
+git add 快速部署.sh README.md VPS部署指南.md GitHub上传指南.md
+
+# 4. 提交
+git commit -m "Initial commit: VLESS Server with Web Panel"
+
+# 5. 推送
+git push -u origin main
+
+═══════════════════════════════════════════════════════════════
+  在 VPS 上拉取
+═══════════════════════════════════════════════════════════════
+
+git clone https://github.com/您的用户名/仓库名.git
+cd 仓库名
+chmod +x vless-server.sh start_panel.sh 快速部署.sh
+pip3 install -r requirements.txt
+./vless-server.sh
+
+═══════════════════════════════════════════════════════════════
+
