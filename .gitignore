@@ -1,0 +1,60 @@
+# 配置文件（运行时生成，不应上传）
+/etc/vless-reality/
+*.conf
+*.json
+*.log
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 日志文件
+*.log
+logs/
+*.log.*
+
+# 敏感信息
+*.key
+*.pem
+*.crt
+*.cert
+secrets/
+.env
+config.local.*
+
+# IDE 文件
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 测试文件
+test/
+tests/
+*.test
+
+# 文档（可选，根据需求决定是否上传）
+# 优化完成说明.md
+# 优化建议.md
+# 脚本解析.md
+
